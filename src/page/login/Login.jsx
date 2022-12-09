@@ -31,12 +31,12 @@ const Login = () => {
                 <Separator />
                 <Form_Login>
                     <Label_Login>Usuario</Label_Login>
-                    <Input_Login placeholder='Ingrese Usuario' />
-                    <Icon_Info_User><FontAwesomeIcon icon={faCircleInfo} color={"palevioletred"}/></Icon_Info_User>
+                    <Input_Login placeholder={userPassword.username !== "" && userPassword.username} />
+                    <Icon_Info_User><FontAwesomeIcon icon={faCircleInfo} color={"palevioletred"} /></Icon_Info_User>
                     <Label_Login>Contraseña</Label_Login>
-                    <Input_Login type={eye ? "text" : "password"} placeholder='Ingrese Contraseña' />
+                    <Input_Login type={eye ? "text" : "password"} placeholder={userPassword.username !== "" && userPassword.password} />
                     <Icon_Password><FontAwesomeIcon onClick={() => { setEye(!eye) }} icon={eye ? faEyeSlash : faEye} color={"palevioletred"} /></Icon_Password>
-                    <Icon_Info_Password><FontAwesomeIcon icon={faCircleInfo} color={"palevioletred"}/></Icon_Info_Password>
+                    <Icon_Info_Password><FontAwesomeIcon icon={faCircleInfo} color={"palevioletred"} /></Icon_Info_Password>
                     <Button>Iniciar Sesion</Button>
                 </Form_Login>
             </Wrapper>
