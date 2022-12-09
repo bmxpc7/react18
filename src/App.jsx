@@ -1,7 +1,9 @@
+import Principal from "./page/principal"
 function App() {
 
   return (
     <div className="App">
+      <Principal/>
     </div>
   )
 }
